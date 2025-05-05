@@ -1,0 +1,131 @@
+/* src/App.css */
+
+/* Styles for the root element where the app is mounted */
+#root {
+  display: flex; /* Make #root a flex container */
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh; /* Ensure it takes at least the full viewport height */
+  width: 100vw; /* Allow root to take full viewport width */
+  max-width: 100vw; /* Ensure it doesn't exceed viewport width */
+  box-sizing: border-box;
+  margin: 0; /* Explicitly ensure no margin */
+  padding: 0; /* Ensure no padding is pushing content inwards */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Styles for the main application container */
+.App {
+  flex-grow: 1; /* Allow App to grow to fill available vertical space */
+  display: flex; /* Make App a flex container */
+  flex-direction: column; /* Stack children vertically */
+  width: 100vw; /* Allow App to take full viewport width */
+  max-width: 100vw; /* Ensure it doesn't exceed viewport width */
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Ensure navbar spans full width */
+nav.navbar {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+}
+
+/* Style for product cards to ensure consistent sizing */
+.card {
+  min-width: 18rem;
+  max-width: 22rem;
+  margin: 0.5rem;
+  flex: 0 0 auto;
+}
+
+/* Ensure pages take full width */
+.products,
+.cart-page,
+.favorite-page {
+  width: 100%;
+}
+
+/* Navbar container to ensure full width */
+.navbar-container {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  right: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Main content styles for centering content below the full-width Navbar */
+.main-content {
+  flex-grow: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  min-height: 70vh; /* Ensure minimum height for content area */
+}
+
+/* Footer styles */
+.footer {
+  width: 100vw;
+  max-width: 100vw;
+  margin-top: auto;
+  padding: 20px 0;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode footer border */
+.dark .footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card padding */
+.card {
+  padding: 1em; /* Adjust padding as needed */
+}
+
+.read-the-docs {
+  color: #888;
+}

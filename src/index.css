@@ -1,0 +1,132 @@
+/* src/index.css */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  /* Default colors - will be overridden by Bootstrap's data-bs-theme */
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.navbar-red {
+  background-color: #ff0000 !important;
+}
+
+.navbar-red .navbar-nav .nav-link.active {
+  color: white !important;
+  border-bottom: 2px solid white;
+}
+
+.btn-red {
+  background-color: #ff0000 !important;
+  color: white !important;
+  border-color: #ff0000 !important;
+}
+
+.btn-red:hover {
+  background-color: #cc0000 !important;
+  border-color: #cc0000 !important;
+}
+
+.btn-red:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0.25) !important;
+}
+
+[data-bs-theme="dark"] {
+  color: #e0e0e0;
+  background-color: #1e1e1e;
+}
+
+[data-bs-theme="dark"] .navbar-red .navbar-brand,
+[data-bs-theme="dark"] .navbar-red .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-bs-theme="dark"] .navbar-red .btn-outline-light {
+  color: white !important;
+  border-color: white !important;
+}
+
+[data-bs-theme="dark"] .card {
+  background-color: #333;
+  color: #e0e0e0;
+  border-color: #444;
+}
+
+[data-bs-theme="dark"] h1,
+[data-bs-theme="dark"] h2,
+[data-bs-theme="dark"] h3,
+[data-bs-theme="dark"] h4,
+[data-bs-theme="dark"] h5,
+[data-bs-theme="dark"] h6 {
+  color: #f0f0f0;
+}
+
+/* When main-content has no children or only empty children, ensure it still takes full height */
+.main-content:empty,
+.main-content:only-child {
+  min-height: 70vh;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+}
+
+}
