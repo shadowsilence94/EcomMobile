@@ -126,7 +126,7 @@ const Footer = () => {
                   theme === "light" ? "text-muted" : "text-light opacity-75"
                 }
               >
-                Designed with <span className="text-danger">❤</span> by Htut Ko
+                Designed by Htut Ko
                 Ko
               </span>
             </p>

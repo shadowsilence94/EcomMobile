@@ -1,0 +1,156 @@
+/* Modern Tech-Style Font System */
+
+/* Base Font Settings */
+:root {
+  --font-primary: 'Outfit', sans-serif;
+  --font-secondary: 'Space Grotesk', sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+  
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+/* Global Typography */
+body {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/* Product Cards */
+.card-title {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.01em;
+}
+
+.card-text {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-light);
+}
+
+/* Prices and Numbers */
+.price, .number {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.02em;
+}
+
+/* Navigation */
+.navbar-brand {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.02em;
+}
+
+/* Buttons */
+button, .btn {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* Code and Technical Text */
+code, pre, .technical-text {
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: -0.01em;
+}
+
+/* Product Details */
+.product-name {
+  font-family: var(--font-secondary);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+}
+
+.product-description {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.7;
+}
+
+/* Search Box */
+.search-box input {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0.01em;
+}
+
+/* Footer */
+footer {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-light);
+  letter-spacing: 0.02em;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  h4 {
+    font-size: 1.25rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+}

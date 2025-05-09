@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import { useTheme } from "../context/ThemeContext"; // Import useTheme hook
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons"; // Import sun and moon icons
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons"; // Import icons
 
 const Navbar = (props) => {
   const location = useLocation();
@@ -16,8 +16,8 @@ const Navbar = (props) => {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg w-100 vw-100 ${
-        theme === "light" ? "navbar-light bg-light" : "navbar-dark bg-dark"
+      className={`navbar navbar-expand-lg navbar-tech w-100 vw-100 ${
+        theme === "light" ? "navbar-light" : "navbar-dark"
       }`}
       style={{
         width: "100vw",
@@ -28,26 +28,41 @@ const Navbar = (props) => {
       }}
     >
       <div className="container-fluid px-3 w-100">
-        <Link to="/" className="navbar-brand">
-          Htut Gadget Shop
+        <Link to="/" className="navbar-brand d-flex align-items-center">
+          <img 
+            src="/icon.png" 
+            alt="Htut's Gadget Shop Logo" 
+            className="navbar-logo me-2"
+            style={{
+              height: "32px",
+              width: "auto",
+              borderRadius: "6px"
+            }}
+          />
+          <span className="text-gradient">Htut's Gadget Shop</span>
         </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        
+        {/* Theme Toggle Button for mobile - visible only on small screens */}
+        <div className="d-flex align-items-center d-lg-none">
+          <button
+            className="btn btn-tech-outline btn-sm me-2 theme-toggle-mobile"
+            onClick={toggleTheme}
+            aria-label={
+              theme === "light"
+                ? "Switch to Dark Mode"
+                : "Switch to Light Mode"
+            }
+          >
+            <FontAwesomeIcon icon={theme === "light" ? faMoon : faSun} />
+          </button>
+        </div>
+        
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link
                 to="/"
-                className={"nav-link " + (pathname === "/" && "active")}
+                className={`nav-link ${pathname === "/" ? "active" : ""}`}
                 aria-current="page"
               >
                 Products
@@ -56,41 +71,40 @@ const Navbar = (props) => {
             <li className="nav-item">
               <Link
                 to="/cart"
-                className={"nav-link " + (pathname === "/cart" && "active")}
+                className={`nav-link ${pathname === "/cart" ? "active" : ""}`}
               >
                 Cart{" "}
                 {totalItemCount > 0 && (
-                  <span className="badge bg-secondary">{totalItemCount}</span>
+                  <span className="badge bg-primary">{totalItemCount}</span>
                 )}
               </Link>
             </li>
             <li className="nav-item">
               <Link
                 to="/favorite"
-                className={"nav-link " + (pathname === "/favorite" && "active")}
+                className={`nav-link ${pathname === "/favorite" ? "active" : ""}`}
               >
                 Favorite{" "}
                 {favoriteIds.length > 0 && (
-                  <span className="badge bg-secondary">
+                  <span className="badge bg-primary">
                     {favoriteIds.length}
                   </span>
                 )}
               </Link>
             </li>
           </ul>
-          {/* Theme Toggle Button with Icon */}
-          <div className="ms-auto">
+          
+          {/* Theme Toggle Button for desktop - visible only on large screens */}
+          <div className="ms-auto d-none d-lg-block">
             <button
-              className="btn btn-outline-primary"
+              className="btn btn-tech-outline"
               onClick={toggleTheme}
-              // Optional: Add an aria-label for accessibility
               aria-label={
                 theme === "light"
                   ? "Switch to Dark Mode"
                   : "Switch to Light Mode"
               }
             >
-              {/* Conditionally render sun or moon icon */}
               <FontAwesomeIcon icon={theme === "light" ? faMoon : faSun} />
             </button>
           </div>

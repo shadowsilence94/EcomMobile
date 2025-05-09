@@ -1,0 +1,37 @@
+{
+  "short_name": "Htut Gadget",
+  "name": "Htut Gadget Shop",
+  "icons": [
+    {
+      "src": "/htut_s_gadget_shop_icon.jpeg",
+      "sizes": "64x64",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "scope": "/",
+  "description": "Shop for the latest gadgets at Htut Gadget Shop"
+}
